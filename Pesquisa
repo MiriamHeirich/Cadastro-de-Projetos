@@ -1,0 +1,37 @@
+/*Em uma avaliação de um produto, o cliente responde sua opinião(1- Satisfatório, 2- Indiferente, 3- Insatisfatório).Faça um programa que leia a idade e opinião e apresente: o número de clientes que responderam satisfatório, a média de idade dos clientes que opinaram como satisfatório, e o número de clientes que responderam insatisfatório.O programa se encerra quando for digitado o valor 0 para a idade*/
+
+#include <stdio.h>
+int main(){
+    int idade, nPessoas, nPessoasI, nPessoasS, opiniao;
+    float somaI, media;
+    nPessoas = 0;
+    nPessoasS = 0;
+    nPessoasI = 0;
+    somaI = 0;
+    printf ("Informe a idade :\n");
+    scanf ("%d", &idade);
+    while (idade != 0){
+        do{
+            printf("Informe sua Opinião:\n 1- Satisfatório\n 2- Indiferente\n 3- Insatisfatório\n");
+            scanf("%d", &opiniao);
+            }
+            while ((opiniao !=1) && (opiniao !=2) && (opiniao !=3));
+
+            nPessoas ++;
+
+            if (opiniao == 1){
+                somaI = somaI + idade;
+                
+                nPessoas++;
+                }
+               
+                else {
+                    if(opiniao == 3)
+                    nPessoasI++;
+                    }
+                    
+                    printf("informe a Idade: \n");
+                    scanf("%d", &idade);
+                    }
+
+    media = (somaI/nPessoasS);
